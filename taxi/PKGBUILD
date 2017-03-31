@@ -1,0 +1,26 @@
+# maintainer: stefan heinemann at codedump dot ch
+pkgbase=('python-taxi')
+pkgname=('python-taxi')
+_module='taxi'
+pkgver='4.2.0'
+pkgrel=1
+pkgdesc="Taxi: timesheeting made easy"
+url="https://github.com/sephii/taxi"
+depends=('python')
+makedepends=('python-setuptools')
+license=('unknown')
+arch=('any')
+source=("https://files.pythonhosted.org/packages/source/t/taxi/taxi-${pkgver}.tar.gz")
+md5sums=('b7eae300a372af244bc10c705508c6ec')
+
+build() {
+    cd "${srcdir}/${_module}-${pkgver}"
+    chmod +r taxi.egg-info/*
+    python setup.py build
+}
+
+package() {
+    depends+=()
+    cd "${srcdir}/${_module}-${pkgver}"
+    python setup.py install --root="${pkgdir}" --optimize=1 --skip-build 
+}
