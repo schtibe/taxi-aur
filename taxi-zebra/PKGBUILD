@@ -1,7 +1,7 @@
 pkgbase=('python-taxi_zebra')
 pkgname=('python-taxi_zebra')
 _module='taxi-zebra'
-pkgver='1.4.0'
+pkgver='1.4.1'
 pkgrel=1
 pkgdesc="Zebra backend for Taxi"
 url="https://github.com/sephii/taxi-zebra"
@@ -10,7 +10,7 @@ makedepends=('python-setuptools')
 license=('unknown')
 arch=('any')
 source=("https://github.com/sephii/taxi-zebra/archive/${pkgver}.tar.gz")
-md5sums=('6f2e9ac8b53ce2ee2dde803c8885aabb')
+md5sums=('b53d53ee5a4fba46c46a951adf6081b0')
 
 build() {
     cd "${srcdir}/${_module}-${pkgver}"
