@@ -1,0 +1,26 @@
+# maintainer: stefan heinemann at codedump dot ch
+pkgbase='python-taxi-git'
+pkgname='python-taxi-git'
+_module='taxi'
+pkgver='dev'
+pkgrel=1
+pkgdesc="Taxi: timesheeting made easy"
+url="https://github.com/sephii/taxi"
+depends=('python')
+makedepends=('python-setuptools')
+conflicts=('python-taxi')
+license=('unknown')
+arch=('any')
+source=("git+https://github.com/liip/taxi#branch=dev")
+md5sums=('SKIP')
+
+build() {
+    cd "${srcdir}/${_module}"
+    python setup.py build
+}
+
+package() {
+    depends+=()
+    cd "${srcdir}/${_module}"
+    python setup.py install --root="${pkgdir}" --optimize=1 --skip-build 
+}
