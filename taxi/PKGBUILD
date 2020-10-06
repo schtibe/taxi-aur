@@ -2,7 +2,7 @@
 pkgbase='python-taxi'
 pkgname='python-taxi'
 _module='taxi'
-pkgver='5.0'
+pkgver='6.0'
 pkgrel=1
 pkgdesc="Taxi: timesheeting made easy"
 url="https://github.com/sephii/taxi"
@@ -11,7 +11,7 @@ makedepends=('python-setuptools')
 license=('unknown')
 arch=('any')
 source=("https://github.com/sephii/taxi/archive/${pkgver}.tar.gz")
-md5sums=('b11b8398b492a2897182ae061cd89b44')
+md5sums=('d8c65433dc083f1e72aebc63c08b73a5')
 
 build() {
     cd "${srcdir}/${_module}-${pkgver}"
